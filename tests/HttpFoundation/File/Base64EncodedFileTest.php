@@ -11,10 +11,10 @@ class Base64EncodedFileTest extends TestCase
 {
     /**
      * @test
-     * @expectedException \Symfony\Component\HttpFoundation\File\Exception\FileException
      */
     public function testThrowExceptionUnlessValidChars()
     {
+        $this->expectException(\Symfony\Component\HttpFoundation\File\Exception\FileException::class);
         new Base64EncodedFile('@');
     }
 

@@ -17,7 +17,7 @@ class FileToBase64EncodedStringTransformerTest extends TestCase
      */
     private $transformer;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->transformer = new FileToBase64EncodedStringTransformer();
     }
@@ -49,11 +49,10 @@ class FileToBase64EncodedStringTransformerTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Symfony\Component\Form\Exception\TransformationFailedException
-     * @expectedExceptionMessage invalid path
      */
     public function testTransformInvalidPath()
     {
+        $this->expectException(\Symfony\Component\Form\Exception\TransformationFailedException::class);
         $this->transformer->transform($this->getFile('invalid path'));
     }
 
@@ -89,10 +88,10 @@ class FileToBase64EncodedStringTransformerTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Symfony\Component\Form\Exception\TransformationFailedException
      */
     public function testReverseTransformInvalidChars()
     {
+        $this->expectException(\Symfony\Component\Form\Exception\TransformationFailedException::class);
         $this->transformer->reverseTransform('@');
     }
 
