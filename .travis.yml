@@ -4,6 +4,7 @@ cache:
   directories:
     - .phpunit
     - $HOME/.composer/cache/files
+    - $HOME/.cache/composer/files
 
 php:
   - 7.4
@@ -19,6 +20,6 @@ before_install:
   - if [ "$DEPENDENCY" != "" ]; then composer require "${DEPENDENCY}" --dev --no-update; fi;
 
 install:
-  - composer update --prefer-source --no-interaction
+  - composer update --no-interaction
 
 script: composer run-script test
