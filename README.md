@@ -23,7 +23,7 @@ Provides handling for base64 encoded files
 2. Install
 
     ```bash
-    $ composer require bagrinsergiu/base64-encoded-file
+    $ composer require bagrinsergiu/base64-encoded-file dev-master
     ```
 
 ## Usage
