@@ -3,18 +3,28 @@ base64-encoded-file
 
 Provides handling for base64 encoded files
 
-[![Build Status](https://travis-ci.org/hshn/base64-encoded-file.svg?branch=master)](https://travis-ci.org/hshn/base64-encoded-file)
-[![Latest Stable Version](https://poser.pugx.org/hshn/base64-encoded-file/v/stable.svg)](https://packagist.org/packages/hshn/base64-encoded-file)
-[![Total Downloads](https://poser.pugx.org/hshn/base64-encoded-file/downloads.svg)](https://packagist.org/packages/hshn/base64-encoded-file)
-[![Latest Unstable Version](https://poser.pugx.org/hshn/base64-encoded-file/v/unstable.svg)](https://packagist.org/packages/hshn/base64-encoded-file)
-[![License](https://poser.pugx.org/hshn/base64-encoded-file/license.svg)](https://packagist.org/packages/hshn/base64-encoded-file)
-
+[![Build Status](https://travis-ci.org/bagrinsergiu/base64-encoded-file.svg?branch=master)](https://travis-ci.org/bagrinsergiu/base64-encoded-file)
 
 ## Installation
 
-```bash
-$ php composer.phar require hshn/base64-encoded-file
-```
+1. Add in `composer.json`
+
+    ```json
+    {
+        "repositories": [
+            {
+                "type": "vcs",
+                "url": "https://github.com/bagrinsergiu/base64-encoded-file.git"
+            }
+        ]
+    }
+    ```
+
+2. Install
+
+    ```bash
+    $ composer require bagrinsergiu/base64-encoded-file
+    ```
 
 ## Usage
 
@@ -44,7 +54,6 @@ $form = $formBuilder
     ->add('file', Base64EncodedFileType::class)
     ->getForm();
 ```
-
 
 ### Integration in a Symfony project (manual install)
 
