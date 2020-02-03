@@ -10,12 +10,12 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
  */
 final class Base64EncodedFileNormalizer implements DenormalizerInterface
 {
-    public function denormalize($data, $class, $format = null, array $context = array())
+    public function denormalize($data, $class, string $format = null, array $context = array())
     {
         return new Base64EncodedFile($data);
     }
 
-    public function supportsDenormalization($data, $type, $format = null)
+    public function supportsDenormalization($data, $type, string $format = null)
     {
         return Base64EncodedFile::class === $type && \is_string($data);
     }
