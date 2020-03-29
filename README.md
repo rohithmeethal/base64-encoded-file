@@ -14,7 +14,7 @@ Provides handling for base64 encoded files
         "repositories": [
             {
                 "type": "vcs",
-                "url": "https://github.com/bagrinsergiu/base64-encoded-file.git"
+                "url": "https://github.com/rohithmeethal/base64-encoded-file.git"
             }
         ]
     }
@@ -23,7 +23,7 @@ Provides handling for base64 encoded files
 2. Install
 
     ```bash
-    $ composer require bagrinsergiu/base64-encoded-file dev-master
+    $ composer require rohithmeethal/base64-encoded-file dev-master
     ```
 
 ## Usage
